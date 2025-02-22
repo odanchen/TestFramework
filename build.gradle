@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group = 'uw.odanchen'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:4.29.0'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.9.3'
+    implementation 'org.testng:testng:7.11.0'
+    implementation 'org.assertj:assertj-core:3.27.3'
+    testImplementation 'org.testng:testng:7.11.0'
+    testImplementation 'org.slf4j:slf4j-log4j12:2.0.16'
+}
+
+test {
+    useTestNG() {}
+    include("**/*.class")
+}
