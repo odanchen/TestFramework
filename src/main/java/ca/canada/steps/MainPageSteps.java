@@ -9,26 +9,27 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MainPageSteps {
+    private final MainPage mainPage = PageHolder.getPage(MainPage.class);
 
     public MainPageSteps openMainPage() {
-        PageHolder.getPage(MainPage.class).open();
+        mainPage.open();
         return this;
     }
 
     public MainPageSteps clickMenuButton() {
-        PageHolder.getPage(MainPage.class).clickMenuButton();
+        mainPage.clickMenuButton();
         return this;
     }
 
     public void checkMainButton() {
-        String buttonText = PageHolder.getPage(MainPage.class).getMenuButtonText();
+        String buttonText = mainPage.getMenuButtonText();
         assertThat(buttonText)
                 .as("Button text is not expected")
                 .isEqualToIgnoringCase("Menu");
     }
 
     public void checkMenuItems() {
-        List<String> actualMenuItems = PageHolder.getPage(MainPage.class).getMenuItems();
+        List<String> actualMenuItems = mainPage.getMenuItems();
         assertThat(actualMenuItems)
                 .as("Unexpected menu items")
                 .containsExactlyInAnyOrderElementsOf(MainMenuDataProvider.getListOfMenuItems());

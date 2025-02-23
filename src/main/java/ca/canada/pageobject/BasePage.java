@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public abstract class BasePage<T extends BasePage<T>> {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(BasePage.class);
+    protected final Logger logger = LoggerFactory.getLogger(this.getClass());
     protected WebDriver driver;
 
     protected BasePage() {
@@ -18,7 +18,7 @@ public abstract class BasePage<T extends BasePage<T>> {
 
     @SuppressWarnings("unchecked")
     public T open() {
-        LOGGER.info("Navigating to {}", getURL());
+        logger.info("Navigating to {}", getURL());
         driver.get(getURL());
         return (T) this;
     }
