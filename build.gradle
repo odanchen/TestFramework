@@ -14,11 +14,17 @@ dependencies {
     implementation 'io.github.bonigarcia:webdrivermanager:5.9.3'
     implementation 'org.testng:testng:7.11.0'
     implementation 'org.assertj:assertj-core:3.27.3'
+    implementation 'org.aeonbits.owner:owner:1.0.12'
     testImplementation 'org.testng:testng:7.11.0'
     testImplementation 'org.slf4j:slf4j-log4j12:2.0.16'
 }
 
 test {
+    systemProperties(System.getProperties())
     useTestNG() {}
     include("**/*.class")
+    testLogging {
+        events "standardOut", "PASSED", "FAILED", "SKIPPED"
+        showStandardStreams = true
+    }
 }

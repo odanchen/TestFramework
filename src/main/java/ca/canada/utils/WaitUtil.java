@@ -1,7 +1,6 @@
 package ca.canada.utils;
 
 import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.FluentWait;
 
 import java.time.Duration;
