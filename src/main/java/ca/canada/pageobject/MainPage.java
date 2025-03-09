@@ -13,12 +13,19 @@ public class MainPage extends BasePage<MainPage> {
     private WebElement menuButtonText;
     @FindBy(css = "#wb-auto-2 > button")
     private WebElement menuButton;
+    @FindBy(css = "[property='mainContentOfPage']")
+    private WebElement loadingMarker;
     @FindBy(xpath = "//ul[contains(@data-ajax-replace, 'content/dam/canada/sitemenu')]/li[@role='presentation']/a[not(@data-keep-expanded='md-min')]")
     private List<WebElement> menuItems;
 
     @Override
     public String getURL() {
         return "https://www.canada.ca/en/treasury-board-secretariat.html";
+    }
+
+    @Override
+    public boolean isLoaded() {
+        return super.isLoaded() && ElementActions.isElementVisible(loadingMarker, "loading marker");
     }
 
     public String getMenuButtonText() {

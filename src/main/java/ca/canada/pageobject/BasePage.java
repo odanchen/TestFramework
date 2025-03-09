@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public abstract class BasePage<T extends BasePage<T>> {
+public abstract class BasePage<T extends BasePage<T>> implements Loadable {
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
     protected WebDriver driver;
 
@@ -15,6 +15,10 @@ public abstract class BasePage<T extends BasePage<T>> {
         PageFactory.initElements(driver, this);
     }
     public abstract String getURL();
+
+    public boolean isLoaded() {
+        return driver.getCurrentUrl().startsWith(getURL());
+    }
 
     @SuppressWarnings("unchecked")
     public T open() {

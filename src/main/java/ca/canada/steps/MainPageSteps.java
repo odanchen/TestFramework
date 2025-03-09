@@ -3,6 +3,7 @@ package ca.canada.steps;
 import ca.canada.data.MainMenuDataProvider;
 import ca.canada.pageobject.MainPage;
 import ca.canada.utils.PageHolder;
+import ca.canada.utils.WaitUtil;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ public class MainPageSteps {
     private final MainPage mainPage = PageHolder.getPage(MainPage.class);
 
     public MainPageSteps openMainPage() {
-        mainPage.open();
+        WaitUtil.waitForPage(mainPage.open());
         return this;
     }
 
