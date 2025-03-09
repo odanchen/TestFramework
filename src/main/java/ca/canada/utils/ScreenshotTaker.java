@@ -25,7 +25,7 @@ public class ScreenshotTaker {
         try {
             Files.createDirectories(path);
         } catch (IOException e) {
-            LOGGER.error("Failed to create directory to store page DOMs!", e);
+            LOGGER.error("Failed to create directory to store screenshots", e);
         }
     }
 
