@@ -9,7 +9,7 @@ public class WaitUtil {
     private static final Duration DEFAULT_TIMEOUT = Duration.ofSeconds(10);
 
     private WaitUtil() {
-        throw new RuntimeException("Creating instance is not allowed");
+        throw new FrameworkException("Creating instance is not allowed");
     }
 
     public static <T> FluentWait<T> waitFor(T subject, Duration duration) {

@@ -1,10 +1,12 @@
 package ca.canada.data;
 
+import ca.canada.utils.FrameworkException;
+
 import java.util.List;
 
 public class MainMenuDataProvider {
     private MainMenuDataProvider() {
-        throw new RuntimeException("Creating instance is not allowed");
+        throw new FrameworkException("Creating instance is not allowed");
     }
 
     public static List<String> getListOfMenuItems() {

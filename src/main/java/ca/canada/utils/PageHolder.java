@@ -10,7 +10,7 @@ public class PageHolder {
     private static final Map<Class<? extends BasePage<?>>, BasePage<?>> PAGE_MAP = new HashMap<>();
 
     private PageHolder() {
-        throw new RuntimeException("Creating instance not permitted");
+        throw new FrameworkException("Creating instance not permitted");
     }
 
     @SuppressWarnings("unchecked")
@@ -20,7 +20,7 @@ public class PageHolder {
                 PAGE_MAP.put(pageClass, pageClass.getDeclaredConstructor().newInstance());
             } catch (RuntimeException | InvocationTargetException | InstantiationException |
                      IllegalAccessException | NoSuchMethodException e) {
-                throw new RuntimeException("Unable to create page instance", e);
+                throw new FrameworkException("Unable to create page instance", e);
             }
         }
         return (T) PAGE_MAP.get(pageClass);
