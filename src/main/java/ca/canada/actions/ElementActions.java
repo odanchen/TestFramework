@@ -1,6 +1,5 @@
 package ca.canada.actions;
 
-import ca.canada.pageobject.BasePage;
 import ca.canada.utils.WaitUtil;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;

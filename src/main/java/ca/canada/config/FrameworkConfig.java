@@ -13,4 +13,8 @@ public interface FrameworkConfig extends Config {
     @Key("IS_HEADLESS")
     @DefaultValue("false")
     Boolean isHeadless();
+
+    @Key("BROWSER")
+    @DefaultValue("Chrome")
+    String getBrowser();
 }
