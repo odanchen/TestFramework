@@ -1,6 +1,8 @@
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/3gxxZ87gRmKf9xgrxodSK2/644oadjtnzXPmMLEmDu7Zy/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/3gxxZ87gRmKf9xgrxodSK2/644oadjtnzXPmMLEmDu7Zy/tree/main)
+
 # Web Test Automation Framework
 
-A lightweight and modular Web Test Automation Framework built to gain hands-on experience in automated UI testing. The framework follows a layered architecture and leverages industry-standard tools and best practices for efficient and maintainable test automation.
+A lightweight and modular Web Test Automation Framework built to gain hands-on experience in automated UI testing. The framework follows a layered architecture and leverages industry-standard tools and best practices for efficient and maintainable test automation. 
 
 ## Features
 * **Layered Test Automation Architecture** for better separation of concerns
@@ -9,6 +11,7 @@ A lightweight and modular Web Test Automation Framework built to gain hands-on e
 * **Parameterized Test Execution** using **TestNG**
 * **Cross-Browser Support** using WebDriver Manager
 * **Design Patterns & SOLID Principles** for robust test implementation
+* **CI/CD** integration with CircleCI
 
 ## Framework Architecture
 The framework is structured into multiple layers to ensure modularity and maintainability:
