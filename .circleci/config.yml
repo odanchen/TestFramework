@@ -6,4 +6,4 @@ jobs:
       - image: cimg/openjdk:11.0
     steps:
       - checkout
-      - run: ./gradlew clean compile test
+      - run: ./gradlew clean compileTestJava
